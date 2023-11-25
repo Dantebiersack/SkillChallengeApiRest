@@ -19,45 +19,45 @@ public class GlobalExceptionHandler {
     public ErrorResponse handleProductoNotFoundException(ProductoNotFoundException ex){
         return new ErrorResponse("Producto no encontrado", ex.getMessage());
     }
-    @ExceptionHandler(CarritoNotFoundException.class)
+    @ExceptionHandler(CarritoException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleCarritoNotFoundException(CarritoNotFoundException ex){
+    public ErrorResponse handleCarritoNotFoundException(CarritoException ex){
         return new ErrorResponse("Carrito no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(CompradorNotFoundException.class)
+    @ExceptionHandler(CompradorException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleCompradorNotFoundException(CompradorNotFoundException ex){
+    public ErrorResponse handleCompradorNotFoundException(CompradorException ex){
         return new ErrorResponse("Comprador no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(OfertaNotFoundException.class)
+    @ExceptionHandler(OfertaException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleOfertaNotFoundException(OfertaNotFoundException ex){
+    public ErrorResponse handleOfertaNotFoundException(OfertaException ex){
         return new ErrorResponse("Oferta no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(PerfilTiendaNotFoundException.class)
+    @ExceptionHandler(PerfilTiendaException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handlePerfilTiendaNotFoundException(PerfilTiendaNotFoundException ex){
+    public ErrorResponse handlePerfilTiendaNotFoundException(PerfilTiendaException ex){
         return new ErrorResponse("Perfil de Tienda no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(ReseniaNotFoundException.class)
+    @ExceptionHandler(ReseniaException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleReseniaNotFoundException(ReseniaNotFoundException ex){
+    public ErrorResponse handleReseniaNotFoundException(ReseniaException ex){
         return new ErrorResponse("Resenia no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(TransaccionNotFoundException.class)
+    @ExceptionHandler(TransaccionException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleTransaccionNotFoundException(TransaccionNotFoundException ex){
+    public ErrorResponse handleTransaccionNotFoundException(TransaccionException ex){
         return new ErrorResponse("Transaccion no encontrado", ex.getMessage());
     }
 
-    @ExceptionHandler(VendedorNotFoundException.class)
+    @ExceptionHandler(VendedorException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorResponse handleVendedorNotFoundException(VendedorNotFoundException ex){
+    public ErrorResponse handleVendedorNotFoundException(VendedorException ex){
         return new ErrorResponse("Vendedor no encontrado", ex.getMessage());
     }
 

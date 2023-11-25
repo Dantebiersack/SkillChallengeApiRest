@@ -17,7 +17,6 @@ public class ProductoService {
         if(producto.getNombre().isEmpty()){
             throw new ProductoException("Producto no valido");
         }
-
         return productoRepository.save(producto);
     }
 

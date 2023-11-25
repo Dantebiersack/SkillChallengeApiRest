@@ -44,15 +44,16 @@ public class ProductoControllerTest {
 
     @Test
     public void createProductoFailed() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.post("/create")
+        mockMvc.perform(MockMvcRequestBuilders.post("/productos/create")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"nombre\":\"string\",\"descripcion\": \"string\", \"precioUnitario\": 1, \"categoria\": \"string\", \"estatus\": 0, \"detallesEspecificos\": \"string\",\"vendedor_id\": 1}"))
+                        .content("{" +
+                                "}"))
                 .andExpect(MockMvcResultMatchers.status().isNotFound());
     }
 
     @Test
     public void createProductoSuccess() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.post("/create")
+        mockMvc.perform(MockMvcRequestBuilders.post("/productos/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"nombre\":\"string\",\"descripcion\":\"string\",\"precioUnitario\": 1,\"categoria\":\"string\",\"estatus\": 0,\"detallesEspecificos\":\"string\",\"vendedor_id\": 1}"))
                         .andExpect(MockMvcResultMatchers.status().isOk());
